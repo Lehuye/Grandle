@@ -1,24 +1,22 @@
-# introduction
+# 项目介绍
 
-**Grandle**
+本项目主要为数字媒体工具，图片转换和图片转换，主要解决的问题是图片格式，大小。同时也增加了一个pdf合并的功能，可将多个pdf合并为一个。
 
-Raster and vector are collectively referred to as digital images or, more broadly, graphics.
+由于该项目是使用python开发的，可以运行在任何平台上。
 
-这是一个支持将图片转为其它格式的工具,也支持将多个图片，或是多个pdf合并为一个
+# 项目构成
 
-# usage
+![](./screenshot/imga.png)
 
-support to trasnsform format:
+该项目分为两个部份，
 
-Raster format Transform to : jpg, png, webp, icns, ico
+**ui/界面**
 
-Vector format Transform to : svg, eps, pdf
+ui/panel : 文件夹为存放面板的地方，
+ - image_converter_panel.py 为图片转换面板
+ - video_converter_panel.py 为视频转换面板
+ - pdf_merger_panel.py 为pdf合并面板
 
+**utils/函数**
 
-
-# dev
-
-pip install -r requirements.txt 
-
-python app.py
-
+该文件夹主要放置一些转换函数

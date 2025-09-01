@@ -3,8 +3,9 @@ from PyQt5 import QtGui  # 之前添加的导入
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, 
                              QHBoxLayout, QListWidget, QFileDialog, QLabel, 
                              QWidget, QMessageBox, QComboBox, QTabWidget, QProgressBar)  # 添加这一行
-from ui.image_converter import ImageConverter
-from ui.pdf_merger import PDFMergerPanel
+from ui.panel.image_converter_panel import ImageConverter
+from ui.panel.video_converter_panel import VideoConverter
+from ui.panel.pdf_merger_panel import PDFMergerPanel
 
 class MainWindow(QMainWindow):
     """主窗口"""
@@ -22,10 +23,15 @@ class MainWindow(QMainWindow):
         # 添加图片转换标签页
         self.image_converter = ImageConverter()
         tab_widget.addTab(self.image_converter, "图片转换")
+
+        # 添加视频转换标签页
+        self.video_converter = VideoConverter()
+        tab_widget.addTab(self.video_converter, "视频转换")
         
         # 添加PDF合并标签页
         self.pdf_merger = PDFMergerPanel(self)  # 传递主窗口引用
         tab_widget.addTab(self.pdf_merger, "PDF合并")
+
         
         self.setCentralWidget(tab_widget)
         
